@@ -11,6 +11,7 @@ TagManager:
   - FireEnemy
   - WaterEnemy
   - LightningEnemy
+  - Tower
   layers:
   - Default
   - TransparentFX
