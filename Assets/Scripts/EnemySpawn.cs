@@ -17,7 +17,7 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Enemy") == null)
+        if (GameObject.FindGameObjectWithTag("Enemy") == null && GameObject.FindGameObjectWithTag("FireEnemy") == null && GameObject.FindGameObjectWithTag("LightningEnemy") == null && GameObject.FindGameObjectWithTag("WaterEnemy") == null)
         {
             waves = wavesList[wave];
             StartCoroutine(wavestart());
@@ -33,9 +33,6 @@ public class EnemySpawn : MonoBehaviour
                 Instantiate(waves.Enemies[i], this.transform.position, Quaternion.identity);
                 yield return new WaitForSeconds(1f);
             }
-            Debug.Log("part done");
         }
-
-        Debug.Log("wave done");
     }
 }

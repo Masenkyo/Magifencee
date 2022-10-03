@@ -8,7 +8,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (other.CompareTag("Gate"))
         {
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 0.5f);    
         }
     }
 }

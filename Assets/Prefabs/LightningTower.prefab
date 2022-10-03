@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1676918447696506965}
   - component: {fileID: 1676918447696506964}
-  - component: {fileID: 5686421803448848618}
-  - component: {fileID: -4855483301031016841}
+  - component: {fileID: 2319775023169183155}
+  - component: {fileID: 7607263751907435864}
   m_Layer: 0
-  m_Name: NormalTower
+  m_Name: LightningTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: dd071c2f29530854f83d1f1e9d6a5eb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec274a8022dcb004f859d243efb49781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5686421803448848618
-BoxCollider2D:
+--- !u!58 &2319775023169183155
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,23 +96,13 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 3}
-  m_EdgeRadius: 0
---- !u!114 &-4855483301031016841
+  m_Radius: 4
+--- !u!114 &7607263751907435864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies: []
   Enemies2: []
-  Range: 2
+  Range: 4
