@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class HPUI : MonoBehaviour
 {
     public HPGate hp;
+    public Points Point;
     public Text HPText;
+    public Text Points;
     
     void Start()
     {
@@ -14,5 +16,6 @@ public class HPUI : MonoBehaviour
     void Update()
     {
         HPText.text = hp.hp.ToString();
+        Points.text = Point.points.ToString();
     }
 }

@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class RayRayCast : MonoBehaviour
 {
-    
-    void FixedUpdate()
+
+
+    void Start()
     {
         
-        int layerMask = 0;
+    }
 
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity, layerMask))
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * 1000, Color.white);
-            Debug.Log("Did not Hit");
-        }
+            // Cast a ray straight down.
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up * 10);
+            Debug.DrawRay(transform.position, Vector2.up * 10, Color.yellow);
+            // If it hits something...
+            if (hit.collider.gameObject.CompareTag("Laaayer")) Debug.Log("Hit");
+            else if (hit.collider.gameObject.CompareTag("Respawn")) Debug.Log("No Hit");
+        }        
     }
 }

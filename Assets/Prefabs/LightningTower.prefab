@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1676918447696506964}
   - component: {fileID: 2319775023169183155}
   - component: {fileID: 7607263751907435864}
+  - component: {fileID: 7104852240486314029}
+  - component: {fileID: -8462309324631786306}
   m_Layer: 0
   m_Name: LightningTower
   m_TagString: Tower
@@ -114,6 +116,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22105f1ae54e27d4795e0c7b3a70aea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lifetime: 0
+  target: {fileID: 0}
   Enemies: []
-  Enemies2: []
   Range: 4
+--- !u!114 &7104852240486314029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676918447696506966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad98c4cbed480fd41bc48372211f3b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 0}
+  Bullet: {fileID: 4786479714973695521, guid: 13e03c274981e36438a2f116b62c3793, type: 3}
+  speed: 30
+  firerate: 0.5
+  pp: 0.2
+--- !u!114 &-8462309324631786306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676918447696506966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7935ae84be8e98c44a6173524e6dc24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dy: 0
+  dx: 0

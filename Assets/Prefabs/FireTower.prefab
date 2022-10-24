@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1676918447696506964}
   - component: {fileID: -3582616444319234938}
   - component: {fileID: 3432727148734498139}
+  - component: {fileID: -5901693556160801665}
+  - component: {fileID: 4724647116975281682}
   m_Layer: 0
   m_Name: FireTower
   m_TagString: Tower
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.42058414, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,6 +116,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22105f1ae54e27d4795e0c7b3a70aea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lifetime: 0
+  target: {fileID: 0}
   Enemies: []
-  Enemies2: []
   Range: 3
+--- !u!114 &-5901693556160801665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676918447696506966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7935ae84be8e98c44a6173524e6dc24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dy: 0
+  dx: 0
+--- !u!114 &4724647116975281682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676918447696506966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad98c4cbed480fd41bc48372211f3b00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 0}
+  Bullet: {fileID: 4786479714973695521, guid: 8f9bdc0758b61ef40bf576db334cfc5d, type: 3}
+  speed: 4
+  firerate: 0.25
+  pp: 0.5

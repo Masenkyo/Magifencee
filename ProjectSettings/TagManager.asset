@@ -12,6 +12,12 @@ TagManager:
   - WaterEnemy
   - LightningEnemy
   - Tower
+  - Laaayer
+  - WaterDroplet
+  - LightningBolt
+  - CannonBall
+  - Undefined
+  - Flame
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (other.CompareTag("Gate"))
         {
+            transform.position = new Vector2(50, 0);
             Destroy(gameObject, 0.5f);    
         }
     }

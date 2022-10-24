@@ -4,31 +4,16 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-    public int hp = 10;
-    // Start is called before the first frame update
-    void Start()
+    public float hp = 10;
+    public int points;
+    public void TakeDamage(float amountOfDamage)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("NormalBullet"))
+        hp -= amountOfDamage;
+        if (hp <= 0)
         {
-            hp -= 3;
-        }
-        if (other.CompareTag("SnipeBullet"))
-        {
-            hp -= 8;
-        }
-        if (other.CompareTag("RapidBullet"))
-        {
-            hp -= 1;
+            GameObject.Find("Canvas").GetComponent<Points>().AddPoints(points);
+            transform.position = new Vector2(50, 0);
+            Destroy(gameObject, 0.5f);
         }
     }
 }

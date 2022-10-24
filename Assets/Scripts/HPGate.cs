@@ -27,19 +27,19 @@ public class HPGate : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.name == ("Enemy(Clone)"))
         {
             hp-=3;
         }
-        if (other.CompareTag("FireEnemy"))
+        if (other.name == ("FireEnemy(Clone)"))
         {
             hp -= 8;
         }
-        if (other.CompareTag("WaterEnemy"))
+        if (other.name == ("WaterEnemy(Clone)"))
         {
             hp -= 5;
         }
-        if (other.CompareTag("LightningEnemy"))
+        if (other.name == ("LightningEnemy(Clone)"))
         {
             hp -= 10;
         }
