@@ -33,7 +33,7 @@ public class HPGate : MonoBehaviour
         }
         if (other.name == ("FireEnemy(Clone)"))
         {
-            hp -= 8;
+            hp -= 12;
         }
         if (other.name == ("WaterEnemy(Clone)"))
         {

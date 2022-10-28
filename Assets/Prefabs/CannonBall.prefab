@@ -114,6 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cf6569caf3ba146877229483cadf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  noDMG: 
-  critDMG: 
+  damage: 4
+  noDMG: LightningEnemy
+  critDMG: FireEnemy

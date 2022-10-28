@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class EnemySpawn : MonoBehaviour
             StartCoroutine(wavestart());
             wave++;
         }
+        if (wave >= wavesList.Count) GoToWin();
+    }
+    void GoToWin()
+    {
+        SceneManager.LoadScene("Win");
     }
     IEnumerator wavestart()
     {

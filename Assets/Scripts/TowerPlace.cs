@@ -8,6 +8,11 @@ using Mono.Cecil.Cil;
 
 public class TowerPlace : MonoBehaviour
 {
+    public GameObject SpawnRange;
+    public GameObject Range;
+    public GameObject RangeFire;
+    public GameObject RangeLightning;
+    public GameObject RangeWater;
     public GameObject NormalTower;
     public GameObject LightningTower;
     public GameObject WaterTower;
@@ -40,23 +45,37 @@ public class TowerPlace : MonoBehaviour
         if (Tower != null)
         {
             Tower.transform.position = mousepos;
-            if (Input.GetKeyDown(KeyCode.E)) Tower.transform.Rotate(0, 0, -90);          
-            if (Input.GetKeyDown(KeyCode.Q)) Tower.transform.Rotate(0, 0, 90);           
+            SpawnRange.transform.position = mousepos;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Tower.transform.Rotate(0, 0, -90);
+                SpawnRange.transform.Rotate(0, 0, -90);
+            }         
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Tower.transform.Rotate(0, 0, 90);
+                SpawnRange.transform.Rotate(0, 0, 90);
+            }
         }        
         Towers = GameObject.FindObjectsOfType<GameObject>();
         if (Input.GetMouseButtonDown(0) && Tower != null && CanPlace() && tilemap.GetTile(tilemap.WorldToCell(mousepos)) == Gras)
         {
             Tower.GetComponent<NormalShoot>().enabled = true;
             Tower = null;
+            Destroy(SpawnRange);
+            
         }
         else if (Input.GetMouseButtonDown(0) && Tower != null && CanPlace() && tilemap.GetTile(tilemap.WorldToCell(mousepos)) == Grass)
         {
             Tower.GetComponent<NormalShoot>().enabled = true;
             Tower = null;
+            Destroy(SpawnRange);
+            
         }
         if (Input.GetKeyDown(KeyCode.Backspace) && Tower != null)
         {
             Destroy(Tower);
+            Destroy(SpawnRange);
             GameObject.Find("Canvas").GetComponent<Points>().points += Cost;
         }
     }
@@ -68,13 +87,16 @@ public class TowerPlace : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<Points>().AddPoints(Cost);
             Cost = 50;
             Destroy(Tower);
+            Destroy(SpawnRange);
             Tower = Instantiate(NormalTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(Range, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
-        Cost = 50;
-        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= Cost)
+        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= 50)
         {
+            Cost = 50;
             Tower = Instantiate(NormalTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(Range, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }            
     }
@@ -86,13 +108,17 @@ public class TowerPlace : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<Points>().AddPoints(Cost);
             Cost = 150;
             Destroy(Tower);
+            Destroy(SpawnRange);
             Tower = Instantiate(LightningTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeLightning, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
-        Cost = 150;
-        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= Cost)
+
+        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= 150)
         {
+            Cost = 150;
             Tower = Instantiate(LightningTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeLightning, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
     }
@@ -104,13 +130,17 @@ public class TowerPlace : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<Points>().AddPoints(Cost);
             Cost = 300;
             Destroy(Tower);
-            Tower = Instantiate(NormalTower, mousepos, transform.rotation);
+            Destroy(SpawnRange);
+            Tower = Instantiate(WaterTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeWater, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
-        Cost = 300;
-        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= Cost)
+
+        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= 300)
         {
+            Cost = 300;
             Tower = Instantiate(WaterTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeWater, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
     }
@@ -122,13 +152,17 @@ public class TowerPlace : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<Points>().AddPoints(Cost);
             Cost = 250;
             Destroy(Tower);
-            Tower = Instantiate(NormalTower, mousepos, transform.rotation);
+            Destroy(SpawnRange);
+            Tower = Instantiate(FireTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeFire, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
-        Cost = 250;
-        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= Cost)
+
+        if (Tower == null && GameObject.Find("Canvas").GetComponent<Points>().points >= 250)
         {
+            Cost = 250;
             Tower = Instantiate(FireTower, mousepos, transform.rotation);
+            SpawnRange = Instantiate(RangeFire, mousepos, transform.rotation);
             GameObject.Find("Canvas").GetComponent<Points>().RemovePoints(Cost);
         }
     }

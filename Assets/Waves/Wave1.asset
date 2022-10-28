@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 3730740017661920816, guid: 293477fe26d154b42a66f9fdfcee02a4, type: 3}
+  - {fileID: 6281615052222245022, guid: c80c84ad8eefd784f9e231a7af60469b, type: 3}
   Amounts: 05000000

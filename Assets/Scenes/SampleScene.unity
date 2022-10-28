@@ -835,106 +835,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &889702079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 889702083}
-  - component: {fileID: 889702082}
-  - component: {fileID: 889702081}
-  - component: {fileID: 889702080}
-  m_Layer: 5
-  m_Name: CanvasZAWARUDO
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &889702080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889702079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &889702081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889702079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &889702082
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889702079}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &889702083
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889702079}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1012100103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3098,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d11231a8e34b674aab1d2a533f8561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnRange: {fileID: 0}
+  Range: {fileID: 7467333078664379658, guid: f7eb8ddba02600e48ac91c5877e3fd12, type: 3}
+  RangeFire: {fileID: 5938606132931214642, guid: fdd1ea7d6bbd30e4684f9955f9822aae, type: 3}
+  RangeLightning: {fileID: 7364857800482896981, guid: 4591c0077f6d5064caa743ea414848c9, type: 3}
+  RangeWater: {fileID: 205860352669906021, guid: 3048b1c40d9abe14cb830e1fb5febf72, type: 3}
   NormalTower: {fileID: 1676918447696506966, guid: 94be1b6da3864b6438cefc981f6cc7bd, type: 3}
   LightningTower: {fileID: 1676918447696506966, guid: cce5bee2de2469d449439cdb65875119, type: 3}
   WaterTower: {fileID: 1676918447696506966, guid: 9d44b3c06b078d64ebae8df786d66933, type: 3}
@@ -3598,6 +3503,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 326ea2e5738f23b40a8c8f1d00812f2a, type: 2}
   - {fileID: 11400000, guid: a787f9751a87688429c9b73614a53484, type: 2}
   - {fileID: 11400000, guid: f74efc63e14cc7646b50c96f57e649e2, type: 2}
+  - {fileID: 11400000, guid: d7118aa5dea69d9429452204bbaf2fe7, type: 2}
 --- !u!1 &1771777454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,7 +3641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661a1f6730788f949b9e91019c8b4d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 250
+  points: 300
 --- !u!1 &2007863307
 GameObject:
   m_ObjectHideFlags: 0

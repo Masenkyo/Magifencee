@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class Tower : MonoBehaviour
 {
     public float Lifetime;
@@ -9,6 +9,9 @@ public class Tower : MonoBehaviour
     public static GameObject targetenemy;
     public List<GameObject> Enemies = new List<GameObject>();
     public float Range;
+    private AudioSource audio;
+    private void Start(){
+        audio = GetComponent<AudioSource>();}
     void Update()
     {
         Lifetime = 0;
@@ -20,6 +23,7 @@ public class Tower : MonoBehaviour
                 targetenemy = Enemies[i];
             }
         }
+        if (GetComponent<NormalShoot>().time == GetComponent<NormalShoot>().firerate) audio.PlayOneShot(audio.clip);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {        

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave9
   m_EditorClassIdentifier: 
   Enemies:
-  - {fileID: 3730740017661920816, guid: 2b1f5e5355193074f862b941eaa3eca5, type: 3}
-  - {fileID: 3730740017661920816, guid: b106f83d4d55ca14b9681f063a417a17, type: 3}
-  - {fileID: 3730740017661920816, guid: 8cc7f625c416d8b4eb7a231e9a47446d, type: 3}
+  - {fileID: 5472065539732617451, guid: 2b1f5e5355193074f862b941eaa3eca5, type: 3}
+  - {fileID: 6242841161659455236, guid: b106f83d4d55ca14b9681f063a417a17, type: 3}
+  - {fileID: 5748197454979152154, guid: 8cc7f625c416d8b4eb7a231e9a47446d, type: 3}
   Amounts: 1e000000140000000a000000

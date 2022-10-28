@@ -6,9 +6,9 @@ public class NormalShoot : MonoBehaviour
 {
     public Tower t;
     public Transform Bullet;
-    float time;
+    public float time;
     public float speed;
-    [SerializeField] float firerate;
+    public float firerate;
     public float pp;
     
     List<Transform> bullets = new List<Transform>();
