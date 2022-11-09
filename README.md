@@ -17,18 +17,18 @@
 #### Ik heb een scriptable object gemaakt waarbij je kan aanpassen in de inspector wat voor enemies je wilt spawnen en hoeveel en in een bepaalde volgorde.
 #### Dan heb ik een spawn script gemaakt die langs alle waves gaat 1 voor 1, en als alle enemies in de current wave dood zijn gaat hij naar de volgende.
 
-![Wave Scriptable Object in Inspector](../../Afbeeldingen/Imagee.png)
+![Wave Scriptable Object in Inspector](https://github.com/Masenkyo/Magifencee/blob/master/Images/Imagee.png)
 
 ### Aimen van torens
 
 #### Met onze wiskunde lessen heb ik geleerd hoe ik makkelijk een object naar een andere object kan laten kijken/volgen.
-![Simple Aim Script](../../Afbeeldingen/aimm.png)
+![Simple Aim Script](https://github.com/Masenkyo/Magifencee/blob/master/Images/aimm.png)
 
 ### Het HP en Cash laten zien in nummers
 
 #### Ik heb een text gemaakt en dan veranden ik wat er in de text staat door een script.
 #### De script checkt basicly wat de current hp is bij enemyhp en veranderd het getal naar dat getal, hetzelfde met de Cash.
-![](../../Afbeeldingen/UII.png)
+![HP en CASH UI](https://github.com/Masenkyo/Magifencee/blob/master/Images/UII.png)
 
 ### TowerPlace
 
@@ -46,4 +46,4 @@
 #### Basicly hij checkt of hij genoeg points heeft, als dat zo is, dan instantiate hij tower en range en removed de points.
 #### Ook als je hem plaatst dan removed hij de range.
 #### En als je bijv. een kannon pakt, die 50 kost en terwijl je de tower nog niet heb geplaatst dan op de tesla button klikt, removed hij de current tower, geeft het geld terug, en removed het aantal geld dat de tesla kost, hieronder is de functie van de kannon tower.
-![Kannon Script Functie](../../Afbeeldingen/1vOORBEELD.png)
+![Kannon Script Functie](https://github.com/Masenkyo/Magifencee/blob/master/Images/1vOORBEELD.png)
