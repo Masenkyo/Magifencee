@@ -9,10 +9,6 @@ public class HPUI : MonoBehaviour
     public Text HPText;
     public Text Points;
     
-    void Start()
-    {
-        
-    }
     void Update()
     {
         HPText.text = hp.hp.ToString();
