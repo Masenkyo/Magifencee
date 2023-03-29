@@ -13,4 +13,12 @@ public class Nav : MonoBehaviour
     {
         SceneManager.LoadScene("Win");
     }
+    public void GoToStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
+    public void GoToDead()
+    {
+        SceneManager.LoadScene("Dead");
+    }
 }
