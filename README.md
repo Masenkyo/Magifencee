@@ -13,27 +13,27 @@
 ## Technisch
 
 ### Wave Systeem
-
+![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/Waves.cs)
 #### Ik heb een scriptable object gemaakt waarbij je kan aanpassen in de inspector wat voor enemies je wilt spawnen en hoeveel en in een bepaalde volgorde.
 #### Dan heb ik een spawn script gemaakt die langs alle waves gaat 1 voor 1, en als alle enemies in de current wave dood zijn gaat hij naar de volgende.
-![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/Waves.cs)
+
 ![Wave Scriptable Object in Inspector](https://github.com/Masenkyo/Magifencee/blob/master/Images/Imagee.png)
 
 ### Aimen van torens
-
-#### Met onze wiskunde lessen heb ik geleerd hoe ik makkelijk een object naar een andere object kan laten kijken/volgen.
 ![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/Aim.cs)
+#### Met onze wiskunde lessen heb ik geleerd hoe ik makkelijk een object naar een andere object kan laten kijken/volgen.
+
 ![Simple Aim Script](https://github.com/Masenkyo/Magifencee/blob/master/Images/aimm.png)
 
 ### Het HP en Cash laten zien in nummers
-
+![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/HPUI.cs)
 #### Ik heb een text gemaakt en dan veranden ik wat er in de text staat door een script.
 #### De script checkt basicly wat de current hp is bij enemyhp en veranderd het getal naar dat getal, hetzelfde met de Cash.
-![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/HPUI.cs)
+
 ![HP en CASH UI](https://github.com/Masenkyo/Magifencee/blob/master/Images/UII.png)
 
 ### TowerPlace
-
+![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/TowerPlace.cs)
 #### Ik heb buttons gemaakt die torens instantiaten met de TowerPlace script.
 
 #### Wat ik eerst heb gedaan is een Vector3 aanmaken die ervoor zorgt dat de tower die geinstantiate is de muis position volgt in 0.5f distances, dus hij heeft squares waar je de torens kan plaatsen, en beweegt in squares, je kan de tower dus bijv. niet tussen de squares plaatsen.
@@ -48,5 +48,5 @@
 #### Basicly hij checkt of hij genoeg points heeft, als dat zo is, dan instantiate hij tower en range en removed de points.
 #### Ook als je hem plaatst dan removed hij de range.
 #### En als je bijv. een kannon pakt, die 50 kost en terwijl je de tower nog niet heb geplaatst dan op de tesla button klikt, removed hij de current tower, geeft het geld terug, en removed het aantal geld dat de tesla kost, hieronder is de functie van de kannon tower.
-![Klik hier voor script](https://github.com/Masenkyo/Magifencee/blob/master/Assets/Scripts/TowerPlace.cs)
+
 ![Kannon Script Functie](https://github.com/Masenkyo/Magifencee/blob/master/Images/1vOORBEELD.png)
